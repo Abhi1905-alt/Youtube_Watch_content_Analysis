@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>AI Productivity Analytics Dashboard</h2>
+
+<div class="dashboard-grid">
+    <div class="left-col">
+        <div class="card ai-card">
+            <h3>🤖 AI Analysis & Recommendations</h3>
+            <div class="ai-content">
+                {{ ai_feedback | safe | replace('\n', '<br>') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="right-col">
+        <div class="card generic-card">
+            <h3>Category Distribution</h3>
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Views Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for metric in metrics %}
+                    <tr>
+                        <td><strong>{{ metric.category }}</strong></td>
+                        <td>{{ metric.count }} views</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card generic-card">
+            <h3>Recent Watch History</h3>
+            <ul class="history-list">
+                {% for row in history[:5] %}
+                <li>
+                    <span class="time">{{ row.watched_at.split(' ')[1] }}</span>
+                    <strong>{{ row.title }}</strong> 
+                    <span class="cat-tag">{{ row.category }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

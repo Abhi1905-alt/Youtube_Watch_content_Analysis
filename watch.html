@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="watch-container">
+    <div class="player-wrapper">
+        <video controls autoplay width="100%">
+            <source src="{{ video.video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-details">
+        <span class="category-badge">{{ video.category }}</span>
+        <h2>{{ video.title }}</h2>
+        <hr>
+        <p class="description">{{ video.description }}</p>
+    </div>
+</div>
+{% endblock %}
