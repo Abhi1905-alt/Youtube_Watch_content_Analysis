@@ -1,31 +1,40 @@
-# StreamAI - YouTube Clone with AI Productivity Tracker
+# 🎥 StreamAI — Data-Driven Video Platform & Behavioral Evaluation Matrix
 
-StreamAI is a specialized full-stack YouTube clone framework built using Python. It tracking platform usage and user analytics natively through a relational storage backend, passing data pipelines directly into a Local/Cloud Generative AI layer to gauge target productivity metrics.
+StreamAI is a full-stack video streaming application engineered with a Python-centric architecture. The platform bridges media presentation layers with automated backend database telemetry to track user consumption patterns, processing platform utilization logs to evaluate viewing distributions over time.
+
+---
 
 ## 🛠️ Architecture & Technical Stack
 
-- **Backend core:** Python 3.x using the **Flask** WSGI micro-framework.
-- **Data Persistence Layer:** SQL relational environment via **SQLite3** for atomic transactional tracking of viewing streams.
-- **AI Reasoning Engine:** Built with the native **Google GenAI SDK**, calling `gemini-2.5-flash` for high-throughput heuristic assessment of user behavior metrics.
-- **Frontend Engine:** Semantic HTML5, CSS3 structural layout architecture, with dynamic variable binding executed via the server-side **Jinja2** template execution stack.
+- **Backend core:** Python 3.x using the high-performance **Flask** WSGI micro-framework.
+- **Data Persistence Layer:** Relational structure via **SQLite3** ensuring ACID-compliant transaction logging.
+- **Analytical Reasoning Component:** Built using the external reasoning model integration to parse semantic context tokens.
+- **Frontend Engine:** Semantic HTML5, CSS3 structural layout architecture, with dynamic content bindings executed via the server-side **Jinja2** template execution stack.
 
 ---
 
-## 🎛️ Feature Run-Through & AI Processing Pipeline
+## 🚀 Key System Mechanics
 
-1. **Structured Video Delivery Grid:** Serves content entries fetched straight from relational indexed arrays.
-2. **Interactive Stream Isolation Hooks:** Opening an asset triggers an asynchronous write instruction updating database transaction arrays (`watch_history`).
-3. **Structured AI Prompt Synthesizer:**
-   - On landing inside the `/dashboard` route, an aggregated join query pulls down historical interactions.
-   - The query parses categorical distributions over time, concatenating them into a structured prompt context layer.
-   - The compiled analytical profile object is fired over API tunnels to Gemini, generating an explicit semantic breakdown of active consumption metrics alongside dynamic structural advice to align behavior back toward technical competency tracks.
+1. **Transactional Event Logging:** Every video playback instance triggers an immediate, asynchronous database instruction, capturing video metadata, categorization arrays, and temporal markers into a centralized `watch_history` schema.
+2. **Behavioral Evaluation Matrix:** On loading the analytics dashboard, the application executes optimized SQL join and aggregation queries to process usage density over time.
+3. **Targeted Productivity Recommendations:** The system isolates entertainment consumption metrics from instructional progression data, translating raw user interaction weights into actionable feedback paths tailored to pivot user focus toward technical and professional milestones.
 
 ---
 
-## 🚀 Environment Initialization Protocols
+## 💻 Environment Staging & Initialization
 
-### 1. Project Scaffolding Allocation
-Isolate your development runtime environment explicitly using native virtual resource environments:
+### 1. Initialize Virtual Environment Isolation
+Isolate project boundaries away from systemic environment scopes:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows execution pipelines use: venv\Scripts\activate
+
+pip install -r requirements.txt
+
+Set your target environment variable parameter straight inside your active shell terminal session profile before initializing data loops:
+
+# Mac / Linux environments
+export GEMINI_API_KEY="your_actual_integration_api_key_string"
+
+# Windows PowerShell environments
+$env:GEMINI_API_KEY="your_actual_integration_api_key_string"
